@@ -1,0 +1,106 @@
+header {
+  background-color: #422D1A;
+  color: #BFA893;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 20px auto; /* Set horizontal margins to auto and add a 20px gap at the top */
+}
+
+
+header h1 {
+	font-family: "dapifer", serif; 
+	font-weight: 700; 
+	font-style: normal;
+	font-size: 50px;
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 0;
+}
+
+nav {
+  width: 100%; /* Set the navigation bar width to cover the whole page */
+  background-color: #59553E;
+  position: sticky; /* Make the navigation bar sticky */
+  top: 0; /* Stick the nav bar to the top */
+  z-index: 100; /* Ensure the nav bar is on top of other content */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #BFA893;
+  text-decoration: none;
+  padding: 10px;
+  font-family: "dapifer", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+
+
+nav a:hover {
+  background-color: #F2F2F2;
+}
+
+body {
+  margin: 0 auto;
+  padding: 20px;
+	line-height: 1.6;
+  width: 100vw; /* Set the width of the body to the viewport width */
+  height: 100vh; /* Set the height of the body to the viewport height */
+  background: radial-gradient(#BFA893, #F2F2F2);
+}
+
+p {
+	font-family: "noto-sans-cjk-kr", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+
+section {
+	margin: 0 auto;
+	padding: 20px;
+	max-width: 1000px;
+}
+
+/* Book list */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+}
+
+.book-list-item {
+  background-color: #F2F2F2;
+  padding: 15px;
+  box-shadow: 0 8px 10px rgba(140, 109, 81, 0.8);
+  color: #422D1A;
+}
+
+.book-list-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: -15px;
+}
+
+.book-list-item h3 {
+  font-size: 20px;
+  margin-bottom: -15px;
+}
+
+.book-list-item p {
+  font-size: 16px;
+  margin-bottom: -15px;
+}
