@@ -1,0 +1,262 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  width: 100vw; /* Set the width of the body to the viewport width */
+  height: 100vh; /* Set the height of the body to the viewport height */
+  background: radial-gradient(#BFA893, #F2F2F2);
+}
+
+p {
+  font-family: "noto-sans-cjk-kr", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Header */
+header {
+  background-color: #422D1A;
+  color: #BFA893;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 20px auto; /* Set horizontal margins to auto and add a 20px gap at the top */
+}
+
+header h1 {
+  font-family: "dapifer", serif; 
+  font-weight: 700; 
+  font-style: normal;
+  font-size: 50px;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+/* Navigation */
+nav {
+  width: 100%; /* Set the navigation bar width to cover the whole page */
+  background-color: #59553E;
+  position: sticky; /* Make the navigation bar sticky */
+  top: 0; /* Stick the nav bar to the top */
+  z-index: 100; /* Ensure the nav bar is on top of other content */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #BFA893;
+  text-decoration: none;
+  padding: 5px;
+  font-family: "dapifer", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+
+nav a:hover {
+  background-color: #422D1A;
+}
+
+/* Search bar, Sort function, and Button */
+.forms {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+  background-color: #F2F2F2;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	font-weight: 700; 
+}
+
+input {
+  flex: 1;
+  padding: 6px;
+  border: #BFA893;
+  font-size: 15px;
+  background-color: #F2F2F2;
+}
+
+label {
+	font-size: 20px;
+}
+
+select {
+  flex: 0.5;
+  margin-left: 10px;
+	margin-right: 10px;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  background-color: #F2F2F2;
+}
+
+button[type="submit"] {
+  flex: 0.3;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #422D1A;
+  color: #BFA893;
+	font-family: "dapifer", serif; 
+  font-weight: 700; 
+  font-style: normal;
+  font-size: 20px;
+  cursor: pointer;
+	border-radius: 8px;
+}
+
+button[type="submit"]:hover {
+  background-color: #59553E;
+}
+
+/* Main Content */
+section {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+/* Book list */
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align the books to the left side */
+}
+
+.book-list-item {
+  background-color: #F2F2F2;
+  padding: 10px;
+  box-shadow: 0 5px 8px rgba(140, 109, 81, 0.8);
+  color: #422D1A;
+  flex: 0 0 141px; /* Set a fixed width for the book item */
+  margin: 5px; /* Add some margin between items */
+}
+
+.book-list-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: -15px;
+}
+
+.book-list-item h3 {
+  font-size: 20px;
+  margin-bottom: -20px;
+}
+
+.book-list-item p {
+  font-size: 16px;
+  margin-bottom: -15px;
+}
+
+/* Slideshow container */
+.gallery {
+  max-width: 800px;
+  margin: 20px auto;
+	background-color: #F2F2F2;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  transition: transform 0.5s ease-in-out;
+  max-width: 300px; /* Adjust this value as needed */
+  margin: 0 auto; /* Center the slide horizontally */
+}
+
+/* Caption text */
+.numbertext {
+  color: #F2F2F2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #422D1A;
+}
+
+/* Next and previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #BFA893;
+  font-size: 20px;
+  font-weight: bold;
+  user-select: none;
+  background-color: #59553E;
+  border-radius: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* Hover effect for buttons */
+.prev:hover,
+.next:hover {
+  background-color: #422D1A;
+}
+
+/* Navigation Dots */
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #BFA893;
+    border-radius: 90%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active {
+    background-color: #59553E;
+}
+
+.slide-left {
+  transform: translateX(-100%);
+}
+
+.slide-right {
+  transform: translateX(100%);
+}
+
+.fade {
+  animation: fadeEffect 1s ease-in-out forwards;
+}
+
+@keyframes fadeEffect {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
