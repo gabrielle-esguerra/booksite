@@ -39,6 +39,15 @@ if ((!isset($_SESSION['logged_in'])) || ($_SESSION['logged_in'] != 1)) {
 
   <!-- Footer -->
   <footer>
+	  <?php
+	  if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == 1) {
+		  echo '<form action="logout.php" method="post">
+		  <button type="submit" name="logoutbutton">Logout</button>
+		  </form>';
+	  } else {
+		  echo "<p>You're currently not logged in</p>";
+	  }
+	  ?>
     <p>&copy; 2023 Gabrielle's Website. All rights reserved.</p>
   </footer>
 </body>

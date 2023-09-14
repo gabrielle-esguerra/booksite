@@ -2,8 +2,6 @@
 session_start();
 /* Connect to the database */
 include'../booksite_mysqli.php';
-
-$_SESSION['logged_in'] = 0;
 	
 if (isset($_POST['username']) && isset($_POST['password'])) {
     $user = trim($_POST['username']);

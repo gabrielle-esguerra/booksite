@@ -3,16 +3,23 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  width: 100vw; /* Set the width of the body to the viewport width */
-  height: 100vh; /* Set the height of the body to the viewport height */
+  min-height: 100vh; /* Change height to min-height */
   background: radial-gradient(#BFA893, #F2F2F2);
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
 }
 
 p {
   font-family: "noto-sans-cjk-kr", sans-serif;
   font-weight: 300;
   font-style: normal;
+	font-size: 18px;
 }
+
+.centered {
+	text-align: center;
+}
+
 
 /* Header */
 header {
@@ -21,8 +28,8 @@ header {
   padding: 10px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  max-width: 600px;
-  margin: 20px auto; /* Set horizontal margins to auto and add a 20px gap at the top */
+  max-width: 900px;
+  margin: 20px auto;
 }
 
 header h1 {
@@ -38,6 +45,7 @@ header h1 {
 /* Navigation */
 nav {
   width: 100%; /* Set the navigation bar width to cover the whole page */
+	height: 50px;
   background-color: #59553E;
   position: sticky; /* Make the navigation bar sticky */
   top: 0; /* Stick the nav bar to the top */
@@ -134,7 +142,8 @@ section {
 .book-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start; /* Align the books to the left side */
+  justify-content: flex-start;
+  margin: 0 -8px; /* Add negative margin to counteract item margin */
 }
 
 .book-list-item {
@@ -142,24 +151,50 @@ section {
   padding: 10px;
   box-shadow: 0 5px 8px rgba(140, 109, 81, 0.8);
   color: #422D1A;
-  flex: 0 0 141px; /* Set a fixed width for the book item */
-  margin: 5px; /* Add some margin between items */
+	width: 143px;
+	margin: 5px;
 }
 
 .book-list-item img {
-  width: 100%;
+  width: 141px;
   height: auto;
   margin-bottom: -15px;
 }
 
 .book-list-item h3 {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: -20px;
 }
 
 .book-list-item p {
   font-size: 16px;
   margin-bottom: -15px;
+}
+
+.book-list-item form input[type='text']  {
+  padding: 5px;
+  border: 1px solid #BFA893;
+  font-size: 10px;
+  background-color: #F2F2F2;
+  color: #422D1A;
+  margin-right: 8px;
+}
+
+.book-list-item form button[type='submit'] {
+  padding: 5px 10px;
+  font-size: 16px;
+	margin-top: 5px;
+	margin-left: -2px;
+}
+
+.book-list-item form select {
+  width: 130px;
+  padding: 5px;
+  border: 1px solid #BFA893;
+  font-size: 16px;
+  background-color: #F2F2F2;
+  color: #422D1A;
+  margin-right: 8px;
 }
 
 /* Slideshow container */
@@ -172,23 +207,26 @@ section {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.gallery p{
+  color: #422D1A;
+  font-family: "dapifer", serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 20px;
+	text-align: center;
+}
+
+.gallery img{
+	height: 500px;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Slides */
 .mySlides {
   display: none;
   transition: transform 0.5s ease-in-out;
-  max-width: 300px; /* Adjust this value as needed */
-  margin: 0 auto; /* Center the slide horizontally */
-}
-
-/* Caption text */
-.numbertext {
-  color: #F2F2F2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: #422D1A;
 }
 
 /* Next and previous buttons */
@@ -205,7 +243,6 @@ section {
   font-weight: bold;
   user-select: none;
   background-color: #59553E;
-  border-radius: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -259,4 +296,24 @@ section {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Footer */
+footer {
+  background-color: #59553E;
+  color: #BFA893;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+footer a {
+  color: #BFA893;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
